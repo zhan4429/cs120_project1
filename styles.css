@@ -1,0 +1,172 @@
+body {
+  margin: 0 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+#logo {
+  width: auto;
+  transition: all 0.4s;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.header-container {
+  background-color: #646764;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 20px 50px;
+  margin: 0;
+  gap: 40px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff9900;
+}
+
+/* Banner Styling */
+#banner {
+  background-image: url("images/banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner h1 {
+  font-size: 10vw; /* Responsive font size */
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.container-intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px 30px;
+  background-color: #333333; /* A dark gray or charcoal background */
+}
+
+.who-we-are {
+  flex: 1;
+  background-color: #444444; /* A slightly lighter shade of dark gray for the boxes */
+  padding: 0px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* A darker shadow to be visible */
+  color: #f0f0f0; /* Light gray text color */
+}
+.why-choose-us {
+  flex: 2;
+  background-color: #444444; /* A slightly lighter shade of dark gray for the boxes */
+  padding: 0px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* A darker shadow to be visible */
+  color: #f0f0f0; /* Light gray text color */
+}
+
+h2 {
+  font-size: 36px;
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 20px;
+}
+
+.why-choose-us strong {
+  color: #c0c0c0; /* A light gray for the brand color emphasis */
+}
+
+.container-intro p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dddddd; /* A lighter gray for paragraph text */
+}
+
+li {
+  font-size: 18px;
+}
+
+footer p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.members-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.member_card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.member_photo {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.member_bio {
+  max-width: 800px;
+  min-width: 300px;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.member_bio p {
+  font-size: 1.25rem;
+  color: black;
+  margin: 10px 10px;
+}
+
+@media (max-width: 600px) {
+  .member_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .member_photo {
+    width: 200px;
+  }
+
+  .member_bio {
+    text-align: left;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
