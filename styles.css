@@ -5,6 +5,19 @@ body {
   color: #333;
 }
 
+#mobile-menu {
+  display: none;
+}
+
+.hamburger-icon span {
+  height: 4px;
+  width: 30px;
+  background-color: white;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
 #logo {
   width: auto;
   transition: all 0.4s;
@@ -21,7 +34,7 @@ body {
   justify-content: space-between;
 }
 
-.header-container .nav {
+.desktop.nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -34,7 +47,7 @@ body {
   letter-spacing: 1px;
 }
 
-.nav a {
+.desktop.nav ul a {
   color: white;
   font-size: 25px;
   text-decoration: none;
@@ -45,7 +58,10 @@ body {
   color: darkgray;
 }
 
-/* Banner Styling */
+.mobile.nav ul li a:hover {
+  color: darkgray;
+}
+
 #banner {
   background-image: url("images/banner.jpeg");
   background-size: cover;
@@ -58,9 +74,14 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
-  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
 }
+
+h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
 #banner h1 {
   font-size: 10vw;
   color: whitesmoke;
@@ -78,35 +99,29 @@ h1 {
 
 .who-we-are {
   flex: 1;
-  background-color: #444444; /* A slightly lighter shade of dark gray for the boxes */
+  background-color: #444444;
   padding: 0px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* A darker shadow to be visible */
-  color: #f0f0f0; /* Light gray text color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #f0f0f0;
 }
 .why-choose-us {
   flex: 2;
-  background-color: #444444; /* A slightly lighter shade of dark gray for the boxes */
+  background-color: #444444;
   padding: 0px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* A darker shadow to be visible */
-  color: #f0f0f0; /* Light gray text color */
-}
-
-h2 {
-  font-size: 36px;
-  color: #ffffff; /* White color for headings */
-  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #f0f0f0;
 }
 
 .why-choose-us strong {
-  color: #c0c0c0; /* A light gray for the brand color emphasis */
+  color: #c0c0c0;
 }
 
 .container-intro p {
   font-size: 18px;
   line-height: 1.6;
-  color: #dddddd; /* A lighter gray for paragraph text */
+  color: #dddddd;
 }
 
 li {
@@ -156,13 +171,6 @@ footer a {
   margin: 10px 10px;
 }
 
-#indy-bg {
-  background-image: url("images/indy.jpg");
-  background-size: cover;
-  width: 400px;
-  height: auto;
-}
-
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -197,19 +205,96 @@ footer a {
   border-radius: 4px;
 }
 
+/* Styles for book.html */
+.form_container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #404a45;
+  color: white;
+  border-radius: 8px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.button {
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: darkgray;
+}
+
 @media (max-width: 600px) {
-  .nav a {
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
   #banner {
     width: 100%;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  #mobile-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    z-index: 999;
+  }
+
+  .desktop.nav {
+    display: none;
+  }
+
+  .mobile.nav {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 150px;
+  }
+  #mobile-menu:hover .mobile.nav {
+    display: block;
+  }
+
+  .mobile.nav ul {
+    background-color: #646764;
+    padding: 5px 5px;
+  }
+  .mobile.nav ul li {
+    display: block;
+    margin: 0;
+  }
+  .mobile.nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-style: bold;
+  }
+  .container-intro {
+    flex-direction: column;
+  }
+  .why-choose-us,
+  ul {
+    padding: 5px 5px;
   }
 
   .member_card {
@@ -223,7 +308,6 @@ footer a {
   }
 
   .member_bio {
-    text-align: left;
     width: 95%;
     margin: 0 auto;
     padding: 0 10px;
@@ -243,19 +327,4 @@ footer a {
     text-align: center;
     border-radius: 4px;
   }
-}
-
-.song-table {
-  max-width: 800px;
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-}
-
-.song-table tr:nth-child(even) {
-  background-color: lightcyan;
 }

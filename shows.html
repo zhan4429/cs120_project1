@@ -14,25 +14,48 @@
   </head>
   <body>
     <header class="header-container">
-      <img
-        src="https://sixfigures.com/wp-content/uploads/2021/07/sf-logo.png"
-        width="180"
-        height="34"
-        alt="Six Figures"
-        id="logo"
-        data-height-percentage="60"
-        data-actual-width="180"
-        data-actual-height="34"
-      />
-      <nav class="nav">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./members.html">Members</a></li>
-        <li><a href="./songs.html">Song List</a></li>
-        <li>
-          <a href="./shows.html" style="color: #ebc934">Upcoming Shows</a>
-        </li>
-        <li><a href="./calendar.html">Book Me</a></li>
+      <a href="./index.html">
+        <img
+          src="https://sixfigures.com/wp-content/uploads/2021/07/sf-logo.png"
+          width="180"
+          height="34"
+          alt="Six Figures"
+          id="logo"
+          data-height-percentage="60"
+          data-actual-width="180"
+          data-actual-height="34"
+        />
+      </a>
+      <nav class="desktop nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./members.html">Members</a></li>
+          <li><a href="./songs.html">Song List</a></li>
+          <li>
+            <a href="./shows.html" style="color: #ebc934">Upcoming Shows</a>
+          </li>
+          <li><a href="./book.html">Book Us</a></li>
+        </ul>
       </nav>
+
+      <div id="mobile-menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mobile nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="songs.html">Song List</a></li>
+            <li>
+              <a href="shows.html" style="color: #ebc934">Upcoming Shows</a>
+            </li>
+            <li><a href="book.html">Book Us</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
     <h1 style="text-align: center">Upcoming shows</h1>
 
@@ -74,5 +97,31 @@
         <div class="overlay-text">Louisville, KY 11/30/2025</div>
       </div>
     </div>
+    <hr />
+    <footer>
+      <a
+        id="facebook-icon"
+        href="https://www.facebook.com/Six-Figures-105746138801518"
+        target="_blank"
+      >
+        <img
+          src="images/facebook.png"
+          alt="Facebook page of SixFigures"
+          width="50"
+        />
+      </a>
+      <a
+        id="youtube-icon"
+        href="https://www.youtube.com/@sixfiguresband"
+        target="_blank"
+      >
+        <img
+          src="images/youtube.png"
+          alt="Youtube page of SixFigures"
+          width="50"
+        />
+      </a>
+      <p>&copy; 2025 SixFigures. All rights reserved.</p>
+    </footer>
   </body>
 </html>
