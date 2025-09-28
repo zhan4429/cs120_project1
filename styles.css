@@ -127,6 +127,13 @@ li {
   font-size: 18px;
 }
 
+.footer_container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 footer p {
   margin-left: 10px;
   font-size: 16px;
