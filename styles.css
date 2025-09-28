@@ -241,6 +241,7 @@ textarea {
   background-color: darkgray;
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
   #banner {
     width: 100%;
@@ -249,9 +250,6 @@ textarea {
     align-items: center;
     justify-content: center;
   }
-}
-
-@media (max-width: 800px) {
   #mobile-menu {
     display: block;
     position: absolute;
@@ -271,6 +269,8 @@ textarea {
     right: 10px;
     width: 150px;
   }
+
+  /* Mobile nagivation will be shown when hamburger icon is hoverd */
   #mobile-menu:hover .mobile.nav {
     display: block;
   }
@@ -294,7 +294,7 @@ textarea {
   }
   .why-choose-us,
   ul {
-    padding: 5px 5px;
+    padding: 5px 10px;
   }
 
   .member_card {
