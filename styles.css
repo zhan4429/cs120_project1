@@ -64,12 +64,13 @@ body {
 #banner {
   background-image: url("images/banner.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: top;
 }
 
 h1 {
@@ -93,7 +94,7 @@ h2 {
   justify-content: space-between;
   gap: 40px;
   padding: 20px 30px;
-  background-color: #333333; /* A dark gray or charcoal background */
+  background-color: #333333;
 }
 
 .who-we-are {
@@ -144,6 +145,7 @@ footer a {
   text-decoration: none;
 }
 
+/* styles for members.html */
 .members-container {
   display: flex;
   flex-direction: column;
